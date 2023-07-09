@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+body {
+    font-family: "Raleway", serif !important;
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    background-color: peachpuff;
+}
+
+.container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    /* border: 5px solid black;
+    border-radius: 5px; */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    margin-top: 0px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#resetBtn {
+    margin-left: 100px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: "Raleway", serif !important;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+#totalTime {
+    font-weight: bold;
+}
+
+#websiteList {
+    padding: 0 15px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+#websiteList li {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    #websiteList li {
+        font-size: 14px;
+    }
+}
