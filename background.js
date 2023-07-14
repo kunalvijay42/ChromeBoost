@@ -1,6 +1,6 @@
 var websites = {};
 
-chrome.tabs.onActivated.addListener(function (activeInfo) {
+chrome.tabs.onActivated.addListener(function (activeInfo) { //event listener that is triggered when a new tab becomes active in the Chrome browser.
     chrome.tabs.get(activeInfo.tabId, function (tab) {
         var url = new URL(tab.url);
         var hostname = url.hostname;
@@ -11,7 +11,7 @@ chrome.tabs.onActivated.addListener(function (activeInfo) {
     });
 });
 
-chrome.webNavigation.onCompleted.addListener(function (details) {
+chrome.webNavigation.onCompleted.addListener(function (details) {  //this function listens for web navigation completion events
     chrome.tabs.get(details.tabId, function (tab) {
         var url = new URL(tab.url);
         var hostname = url.hostname;
@@ -23,6 +23,6 @@ chrome.webNavigation.onCompleted.addListener(function (details) {
     });
 });
 
-chrome.storage.local.set({ totalTime: totalTime, websites: websites }, function () {
+chrome.storage.local.set({ totalTime: totalTime, websites: websites }, function () { //Saves website and total time in local chrome storage.
     chrome.runtime.sendMessage({ totalTime: totalTime });
 });
